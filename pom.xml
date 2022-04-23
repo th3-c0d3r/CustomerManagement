@@ -6,6 +6,8 @@
 	<groupId>com.accenture.lkm</groupId>
 	<artifactId>Assignment_Customer_SpringBootMySQL</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>SpringBootDemo1</name>
+	<url>http://maven.apache.org</url>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -13,8 +15,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
 	</parent>
-	<name>SpringBootDemo1</name>
-	<url>http://maven.apache.org</url>
+	
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,31 +29,44 @@
 			<!-- <exclusions> <exclusion> <groupId>org.springframework.boot</groupId> 
 				<artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions> -->
 		</dependency>
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jetty</artifactId> 
-			</dependency> -->
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<exclusions>
-        			<exclusion>
-            				<groupId>org.hibernate</groupId>
-     				       <artifactId>hibernate-entitymanager</artifactId>
-        			</exclusion>
-    			</exclusions>
-		</dependency>
+		
+		
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<!-- <exclusions>
+        			<exclusion>
+            				<groupId>org.hibernate</groupId>
+     				       <artifactId>hibernate-entitymanager</artifactId>
+        			</exclusion>
+    			</exclusions> -->
+		</dependency>
+		
 		<!-- adding hibernate dependency -->
-		<dependency> 
+		<!-- <dependency> 
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId> 
 			<version>5.2.3.Final</version>
+		</dependency> -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <scope>runtime</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
